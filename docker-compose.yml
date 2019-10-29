@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  server:
+    image: node:13-alpine
+    volumes:
+      - ./code/exercises:/exercises
+      - ./run.sh:/exercises/${EXERCISE}/run.sh
+    ports:
+      - 9000:9000
+      - 9001:9001
+    working_dir: /exercises/${EXERCISE}
+    command: ./run.sh
