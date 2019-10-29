@@ -6,7 +6,7 @@ setup:
 
 .PHONY: run
 run:
-	@ EXERCISE=$(shell find ./code/exercises -mindepth 1 -maxdepth 1 -type d -print0 | sort | xargs -0 -n1 basename | peco) docker-compose up -d --force-recreate
+	@ EXERCISE=$(shell find ./code/exercises -mindepth 1 -maxdepth 1 -type d -print0 | sort | xargs -0 -n1 basename | peco) docker-compose up -d
 
 .PHONY: stop
 stop:

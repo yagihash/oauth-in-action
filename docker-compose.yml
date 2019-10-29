@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   server:
-    image: node:13-alpine
+    build: server
     volumes:
       - ./code/exercises:/exercises
       - ./run.sh:/exercises/${EXERCISE}/run.sh
