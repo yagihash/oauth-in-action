@@ -8,6 +8,10 @@ setup:
 run:
 	@ EXERCISE=$(shell find ./code/exercises -mindepth 1 -maxdepth 1 -type d -print0 | sort | xargs -0 -n1 basename | peco) docker-compose up -d
 
+.PHONY: restart
+restart:
+	@ docker-compose restart
+
 .PHONY: stop
 stop:
 	@ docker-compose stop
