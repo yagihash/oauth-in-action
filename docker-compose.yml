@@ -9,5 +9,6 @@ services:
     ports:
       - 9000:9000
       - 9001:9001
+      - 9002:9002
     working_dir: /exercises/${EXERCISE}
     command: ./run.sh
