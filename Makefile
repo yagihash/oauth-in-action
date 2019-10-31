@@ -16,6 +16,10 @@ stop:
 ps:
 	@ docker-compose ps
 
+.PHONY: logs
+logs:
+	@ docker-compose logs
+
 .PHONY: sh
 sh:
 	@ docker-compose exec server sh
