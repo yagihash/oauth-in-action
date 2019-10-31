@@ -1,3 +1,3 @@
-FROM node:13-alpine
+FROM node:6-alpine
 
 RUN npm i -g nodemon
